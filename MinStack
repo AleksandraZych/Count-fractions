@@ -1,0 +1,18 @@
+class MinStack:
+    def __init__(self):
+        self.base = []
+
+    def push(self, x: int) -> None:
+        self.base.append(x)
+
+    def pop(self) -> None:
+        del self.base[len(self.base) - 1]
+
+    def top(self) -> int:
+        return self.base[len(self.base) - 1]
+
+    def getMin(self) -> int:
+        return min(self.base)
+
+    def check_all_values(self):
+        return self.base
